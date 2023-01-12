@@ -1,6 +1,6 @@
 #### Step 1:
 
-- Create Firebase account and configure Realtime database
+- Create Firebase account and configure Firestore database
   https://firebase.google.com/docs/database/rest/start
 - Create .env file in root dir and add variables according to the config file `src/firebase.config.js` <br>
   eg: <br>
