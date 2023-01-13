@@ -4,34 +4,42 @@
   padding: 10px;
 }
 
-.todo-input{
+.todo-input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 10px;
-  
 }
-.todo-input button{
+
+.todo-input-container svg {
   margin-left: 10px;
-  
 }
-.todo-list-container{
+
+.todo-input {
+  width: 60%;
+  height: 30px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.todo-list-container {
   padding: 50px;
 }
 
-.todo-item-container{
+.todo-item-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid;
   border-color: #282c34;
   padding: 5px;
 }
-.todo-item{
+
+.todo-item {
   margin: 10px;
 }
-.todo-actions{
-  width: 15%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+
+.todo-actions svg {
+  margin-left: 20px;
 }

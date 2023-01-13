@@ -1,4 +1,7 @@
 import React from "react";
+import { BsFillPlusCircleFill } from "react-icons/bs";
+import { CiFloppyDisk } from "react-icons/ci";
+import { MdCancel } from "react-icons/md";
 
 function TodoHeader({
   todo,
@@ -11,17 +14,22 @@ function TodoHeader({
   return (
     <>
       <h1>Todos</h1>
-      <div className="todo-input">
+      <div className="todo-input-container">
         <input
+          className="todo-input"
           name="todo"
           value={todo}
           onChange={onChange}
           placeholder="Enter todo item"
         />
-        <button onClick={update.status ? updateHandler : addTodoHandler}>
-          {update.status ? "Update Todo" : "Add todo"}
-        </button>
-        {update.status ? <button onClick={onCancel}>Cancel</button> : null}
+        {update.status ? (
+          <>
+            <CiFloppyDisk onClick={updateHandler} size={24} />
+            <MdCancel onClick={onCancel} size={24} />
+          </>
+        ) : (
+          <BsFillPlusCircleFill onClick={addTodoHandler} size={24} />
+        )}
       </div>
     </>
   );

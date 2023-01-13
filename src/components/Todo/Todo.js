@@ -21,6 +21,7 @@ const Todo = () => {
   };
 
   const addTodoHandler = async () => {
+    if (todo.length === 0) return alert("Please Enter Todo");
     try {
       const todoItem = {
         todo: todo,
