@@ -1,4 +1,5 @@
 import React from "react";
+import { BsPencil, BsTrash } from "react-icons/bs";
 
 function TodoList({ todoList, onDelete, onEdit }) {
   //   console.log(todoList);
@@ -12,10 +13,8 @@ function TodoList({ todoList, onDelete, onEdit }) {
             <div key={todoItem.id} className="todo-item-container">
               <p className="todo-item">{todoItem.todo}</p>
               <div className="todo-actions">
-                <button onClick={() => onEdit(todoItem.id, todoItem.todo)}>
-                  edit
-                </button>
-                <button onClick={() => onDelete(todoItem.id)}>delete</button>
+                <BsPencil onClick={() => onEdit(todoItem.id, todoItem.todo)} />
+                <BsTrash onClick={() => onDelete(todoItem.id)} />
               </div>
             </div>
           ))
