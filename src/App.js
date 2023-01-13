@@ -62,6 +62,11 @@ function App() {
     setUpdate({ id: id, status: true });
   };
 
+  const onCancel = () => {
+    setTodo("");
+    setUpdate({ ...update, status: false });
+  };
+
   const fetchData = async () => {
     const querySnapshot = await getDocs(collection(db, "Todos"));
     // console.log(querySnapshot.data());
@@ -78,16 +83,18 @@ function App() {
   return (
     <div className="App">
       <h1>Todos</h1>
-      <input
-        name="todo"
-        value={todo}
-        onChange={onChange}
-        placeholder="Enter todo item"
-      />
-      <button onClick={update.status ? updateHandler : addTodoHandler}>
-        {update.status ? "Update Todo" : "Add todo"}
-      </button>
-
+      <div className="todo-input">
+        <input
+          name="todo"
+          value={todo}
+          onChange={onChange}
+          placeholder="Enter todo item"
+        />
+        <button onClick={update.status ? updateHandler : addTodoHandler}>
+          {update.status ? "Update Todo" : "Add todo"}
+        </button>
+        {update.status ? <button onClick={onCancel}>Cancel</button> : null}
+      </div>
       <TodoList todoList={todoList} onDelete={onDelete} onEdit={onEdit} />
     </div>
   );

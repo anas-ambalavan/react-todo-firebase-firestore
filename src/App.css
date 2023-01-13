@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+.todo-input{
+  margin-bottom: 10px;
+  
+}
+.todo-input button{
+  margin-left: 10px;
+  
+}
+.todo-list-container{
+  /* max-width: 75%; */
+}
+
+.todo-item-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid;
+  border-color: #282c34;
+  padding: 5px;
+}
+.todo-item{
+  margin: 10px;
+}
+.todo-actions{
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
