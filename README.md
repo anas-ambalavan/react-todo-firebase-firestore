@@ -1,7 +1,7 @@
 #### Step 1:
 
 - Create Firebase account and configure Firestore database
-  https://firebase.google.com/docs/database/rest/start
+  https://firebase.google.com/docs/firestore
 - Create .env file in root dir and add variables according to the config file `src/firebase.config.js` <br>
   eg: <br>
   `REACT_APP_API_KEY=<Your-Key>`<br>
@@ -22,4 +22,4 @@ npm start
 
 #### For more info about Firebase Firestore Database
 
-https://firebase.google.com/docs/database/web/start
+https://firebase.google.com/docs/firestore
